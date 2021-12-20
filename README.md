@@ -17,4 +17,4 @@ After building, different configuration options can be set using the *config.txt
 After doing the necessary config, run ```./runsim``` to execute the code. As this code is procedural, it might take a lot of time depending upon the number of events specified. Have a coffee!
 
 # Fitting
-The fitting is done using the *fitter.cc* file. This is to be done after Simulation is complete. Make sure that all your data files (*muonList_RunX.root*) are present in *ROOTFiles* directory. Run ```root -l fitter.cc``` to generate, fit and save the histogram. The saved file will be named as *pFit.png*.
+The fitting is done using the *fitter.cc* file. This is to be done after Simulation is complete. If you do not want to run the simulation, you can copy the files from this [link](https://drive.google.com/drive/folders/1z9QfUiWf0tlFRkQGoGDKRnQ7LSObfWRv?usp=sharing) Make sure that all your data files (*muonList_RunX.root*) are present in *ROOTFiles* directory. Run ```root -l fitter.cc``` to generate, fit and save the histogram. The saved file will be named as *pFit.png*.
