@@ -1,3 +1,2 @@
-ROOTFiles/*.root
-.png
+*.png
 .vscode

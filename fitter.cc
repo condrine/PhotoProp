@@ -88,5 +88,5 @@ void fitter() {
     st->SetX2NDC(0.9);
 
     s->Update();
-    s->SaveAs("hist.png");
+    s->SaveAs("pFit.png");
 }
