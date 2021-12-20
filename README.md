@@ -1,5 +1,5 @@
 # Description
- This code simulates of photon production due to minimallyionising muons incident on a plastic scintillator detector and their subsequent detectionby a photodetector placed on one end of the scintillator. It also provides a function f fitting the simulation files so obtained by the simulation using a Landau Distribution
+ This code simulates of photon production due to minimally ionising muons incident on a plastic scintillator detector and their subsequent detectionby a photodetector placed on one end of the scintillator. It also provides a function f fitting the simulation files so obtained by the simulation using a Landau Distribution
 
 # Prerequisites
 To run this code, latest version of gcc 11 and ROOT (6.24) are recommended. This code has been tested to run on Fedora and other linux servers only, and its compatibility with other systems is not guaranteed.
