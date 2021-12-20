@@ -132,7 +132,6 @@ void savePhoton() {
 
     // Iterating over Muon List and Filling Tree
     for (auto p = photonList.begin(); p != photonList.end(); ++p) {
-
         identity = p->identity;
         pos = p->coords;
         t->Fill();
@@ -141,18 +140,4 @@ void savePhoton() {
     // Write to ROOT file
     t->Write();
     delete t;
-}
-
-void photonHist() {
-    TCanvas *c;
-    c = new TCanvas("c","Ver",200,100,700,500);
-    TH1I *h = new TH1I("nPhotons", "", 100, 0, 100);
-    for (auto m = muonList.begin(); m != muonList.end(); ++m) {
-        h->Fill(m->nphotons);
-    }
-
-    h->Draw();
-    c-> Update();
-    c-> Modified();
-    c->SaveAs("hist.png");
 }

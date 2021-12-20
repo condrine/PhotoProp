@@ -67,7 +67,6 @@ void saveMuon() {
 
     // Iterating over Muon List and Filling Tree
     for (auto m = muonList.begin(); m != muonList.end(); ++m) {
-
         identity = m->identity;
         init_pos = m->init_coords;
         final_pos = m->final_coords;

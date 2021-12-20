@@ -10,28 +10,35 @@
 
 using namespace std;
 
+// Parameter Stores
 map<string, int> iRunVars;
 map<string, float> fRunVars;
 map<string, string> sRunVars;
 map<string, bool> bRunVars;
 
+// Parameter Variables
 int N_EVENTS, MAX_REFL, RUN_NO, RAND_SEED;
 float S_LENGTH, S_WIDTH, S_HEIGHT, D_POS_X, D_POS_Y, PATH_STEP;
 bool SAVE_MUON, SAVE_PHOTON;
 string ROOT_DIR;
 
 void setRunVars() {
+
+    // Input file
     std::ifstream cFile ("config.txt");
     if (cFile.is_open())
-    {
+    {   
+        // Skip empty lines or comments
         std::string line;
         while(getline(cFile, line)){
             if(line[0] == '#' || line.empty())
                 continue;
 
+            // Detect var type 
             auto typePos = line.find(" ");
             auto type = line.substr(0, typePos);
 
+            // Read var name and value
             line = line.substr(typePos + 1);
             auto f = [](unsigned char const c) { return std::isspace(c); };
             line.erase(remove_if(line.begin(), line.end(), f), line.end());
@@ -40,6 +47,7 @@ void setRunVars() {
             auto name = line.substr(0, valuePos);
             auto value = line.substr(valuePos + 1);
             
+            // Store var into corresponding map
             if (type == "int") iRunVars.insert({name, stoi(value)});
             if (type == "float") fRunVars.insert({name, stof(value)});
             if (type == "string") sRunVars.insert({name, value});
@@ -51,6 +59,7 @@ void setRunVars() {
         std::cerr << "Couldn't open config file for reading.\n";
     }
 
+    // Set up vars (Needed for optimisation of runtime)
     RUN_NO = iRunVars["RUN_NO"];
     RAND_SEED = iRunVars["RAND_SEED"];
     N_EVENTS = iRunVars["N_EVENTS"];
