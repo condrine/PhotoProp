@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "iostream": "cpp",
+        "Read_dat.C": "cpp",
+        "cmath": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "*.tcc": "cpp",
+        "ostream": "cpp",
+        "fit_mbcGen.C": "cpp",
+        "calc_v2.C": "cpp"
+    }
+}

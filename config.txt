@@ -1,0 +1,20 @@
+# Run Parameters
+int RUN_NO = 9
+int RAND_SEED = 333433
+int N_EVENTS = 100
+
+# Geometry
+float S_LENGTH = 25.
+float S_WIDTH = 25.
+float S_HEIGHT = 1. 
+float D_POS_X = 25. 
+float D_POS_Y = 25.
+
+# Simulation
+float PATH_STEP = 0.01
+int MAX_REFL = 100
+
+# Save Parameters
+bool SAVE_MUON = false
+bool SAVE_PHOTON = false
+string ROOT_DIR = ROOTFiles/
